@@ -13,6 +13,7 @@
   },
   "type": "module",
   "scripts": {
+    "test": "jest",
     "babel-build": "babel src -d babel-transpile --delete-dir-on-start",
     "rollup-build": "rollup -c",
     "babel:rollup:build": "yarn babel-build && yarn rollup-build && node server.js"
@@ -20,12 +21,18 @@
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
     "express": "^4.18.1",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "jest-styled-components": "^7.0.8",
     "rollup": "^2.75.5",
     "rollup-plugin-terser": "^7.0.2"
   }
