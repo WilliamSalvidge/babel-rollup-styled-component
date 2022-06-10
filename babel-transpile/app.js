@@ -1,19 +1,31 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import StyledTestButton from "./button.js";
-import StyleButton from "./styledButton.js";
-import StyledDiv from "./styledDiv.js";
+"use strict";
 
-const App = () => {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Hey again!!!"), /*#__PURE__*/React.createElement(StyledDiv, null, /*#__PURE__*/React.createElement(StyledTestButton, {
-    onClick: () => alert('Hey Will!')
-  }), /*#__PURE__*/React.createElement(StyleButton, {
-    onClick: () => alert('Hey Will!')
-  }, "Primary Button"), /*#__PURE__*/React.createElement(StyleButton, {
+var _react = _interopRequireDefault(require("react"));
+
+var _client = require("react-dom/client");
+
+var _button = _interopRequireDefault(require("./button.js"));
+
+var _styledButton = _interopRequireDefault(require("./styledButton.js"));
+
+var _styledDiv = _interopRequireDefault(require("./styledDiv.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var App = function App() {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, "Hey again!!!"), /*#__PURE__*/_react["default"].createElement(_styledDiv["default"], null, /*#__PURE__*/_react["default"].createElement(_button["default"], {
+    onClick: function onClick() {
+      return alert('Hey Will!');
+    }
+  }), /*#__PURE__*/_react["default"].createElement(_styledButton["default"], {
+    onClick: function onClick() {
+      return alert('Hey Will!');
+    }
+  }, "Primary Button"), /*#__PURE__*/_react["default"].createElement(_styledButton["default"], {
     primary: true
   }, "Secondary Button")));
 };
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render( /*#__PURE__*/React.createElement(App, null));
+var container = document.getElementById('root');
+var root = (0, _client.createRoot)(container);
+root.render( /*#__PURE__*/_react["default"].createElement(App, null));
